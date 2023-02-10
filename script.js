@@ -18,24 +18,15 @@ function getComputerChoice(num) {
 }
 
 function getUserChoice() {
-    let input = prompt("Choose rock, paper or scissors")
-    input = input.toLowerCase()
+    do {
+        var input = prompt("Choose rock, paper or scissors")
+        input = input.toLowerCase()
+        if (input !== 'rock' && input !== 'paper' && input !== 'scissors') {
+            window.alert("enter rock paper or scissors!")
+        }
+    } while (input !== 'rock' && input !== 'paper' && input !== 'scissors')
 
-    switch(input) {
-        case "rock":
-            return "rock"
-            break
-        case "paper":
-            return "paper"
-            break
-        case "scissors":
-            return "scissors"
-            break
-        default:
-            console.log("enter correct value")
-            break
-
-    }
+    return input
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -57,7 +48,7 @@ let random_number = RandomInt(1,3)
 let computer = getComputerChoice(random_number)
 console.log("computer: " + computer)
 
-let player = getUserChoice()
+player = getUserChoice()
 console.log("player: " + player)
 
 console.log(playRound(player, computer))
