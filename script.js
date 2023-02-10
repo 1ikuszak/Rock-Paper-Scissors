@@ -17,6 +17,28 @@ function getComputerChoice(num) {
     }
 }
 
+function getUserChoice() {
+    let input = prompt("Choose rock, paper or scissors")
+    input = input.toLowerCase()
+
+    switch(input) {
+        case "rock":
+            return "rock"
+            break
+        case "paper":
+            return "paper"
+            break
+        case "scissors":
+            return "scissors"
+            break
+        default:
+            console.log("enter correct value")
+            break
+
+    }
+}
+
 
 let random_number = RandomInt(1,3)
 console.log(getComputerChoice(random_number))
+console.log(getUserChoice())
