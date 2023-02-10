@@ -38,7 +38,26 @@ function getUserChoice() {
     }
 }
 
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return "draw!"
+    }
+    else if (playerSelection === "rock" && computerSelection === "scissors") {
+        return "player win!"
+    }
+    else if (playerSelection === "scissors" && computerSelection === "paper") {
+        return "player win!"
+    }
+    else
+     return "computer win!"
+}
+
 
 let random_number = RandomInt(1,3)
-console.log(getComputerChoice(random_number))
-console.log(getUserChoice())
+let computer = getComputerChoice(random_number)
+console.log("computer: " + computer)
+
+let player = getUserChoice()
+console.log("player: " + player)
+
+console.log(playRound(player, computer))
