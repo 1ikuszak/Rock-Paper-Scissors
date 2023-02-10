@@ -43,12 +43,41 @@ function playRound(playerSelection, computerSelection) {
      return "computer win!"
 }
 
+function game(max_rounds) {
+    let player_score = 0
+    let computer_score = 0
 
-let random_number = RandomInt(1,3)
-let computer = getComputerChoice(random_number)
-console.log("computer: " + computer)
+    for (let i = 0; i < max_rounds; i++) {
+        console.log("round: " + i)
+        let random_number = RandomInt(1,3)
+        let computer = getComputerChoice(random_number)
+        console.log("computer: " + computer)
+        player = getUserChoice()
+        console.log("player: " + player)
+        
+        switch(playRound(player, computer)) {
+            case "draw!":
+                player_score++
+                computer_score++
+                break
+            case "computer win!":
+                computer_score++
+                break
+            case "player win!":
+                player_score++
+        }
 
-player = getUserChoice()
-console.log("player: " + player)
+    }
+    if (player_score>computer_score) {
+        return "player won the battle! score " + computer_score + " : " + player_score
+    }
+    else if (computer_score>player_score) {
+        return "computer won the battle! score " + computer_score + " : " + player_score
+    }
+    else
+        return "draw " + computer_score + " : " + player_score
 
-console.log(playRound(player, computer))
+}
+
+
+console.log(game(3))
