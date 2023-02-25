@@ -51,6 +51,7 @@ header p {
 }
 
 .start_section {
+    display: none;
     flex-direction: column;
 }
 
@@ -63,6 +64,27 @@ header p {
     height: 44px;
     color: var(--white-color);
     border: solid 2px var(--white-color);
+}
+
+.in_game_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.in_game_section .score {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.score_table {
+    display: flex;
+    gap: 64px;
+}
+
+.player p, .computer p {
+
 }
 
 .buttons_box {
