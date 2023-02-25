@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.field {
+    display: flex;
+}
+
+.half-field{
+    width: 50%;
+    height: 100vh;
+}
+
+.field > .half-field:first-child {
+    background-color: white;
+}
+
+.field > .half-field:nth-child(2) {
+    background-color: black;
+}
+
+.center-cricle {
+    position: absolute;
+    width: 124px;
+    height: 124px;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 12px solid white;
+    mix-blend-mode: difference;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
