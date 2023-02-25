@@ -20,10 +20,6 @@
     margin: 46px 0;
 }
 
-p {
-    color: white;
-}
-
 header {
     display: flex;
     justify-content: center;
@@ -34,29 +30,10 @@ header p {
     font-size: 34px;
 }
 
-.info_box,
-.buttons_box,
-.monitor,
-.start_section {
+.buttons_box {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.monitor {
-    width: 800px;
-    height: 400px;
-    border: solid 2px var(--white-color);
-    border-radius: 20px;
-}
-
-.start_section {
-    display: none;
-    flex-direction: column;
-}
-
-.start_section p {
-    font-size: 18px;
 }
 
 .start_section button {
@@ -66,25 +43,9 @@ header p {
     border: solid 2px var(--white-color);
 }
 
-.in_game_section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.in_game_section .score {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
 .score_table {
     display: flex;
     gap: 64px;
-}
-
-.player p, .computer p {
-
 }
 
 .buttons_box {
