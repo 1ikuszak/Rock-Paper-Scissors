@@ -80,4 +80,4 @@ function game(max_rounds) {
 }
 
 
-console.log(game(3))
+// console.log(game(3))
