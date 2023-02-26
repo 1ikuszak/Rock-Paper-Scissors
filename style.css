@@ -4,11 +4,12 @@
 :root {
     --dark-color: #121212;
     --white-color: #fff;
+    --neonpink-color: #FF10F0;
+    --neonyellow-color: #FFFF33;
 }
 
 * {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--dark-color);
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -16,8 +17,10 @@
     outline: none;
 }
 
-.container {
-    margin: 46px 0;
+body {
+    background-image: url("/img/battle_field.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -27,43 +30,47 @@ header {
 }
 
 header p {
-    font-size: 34px;
+    font-size: 50px;
+    color: var(--neonpink-color);
 }
+
 
 .buttons_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 50%;
 }
 
-.start_section button {
-    width: 100px;
+.buttons_group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 32px 24px;
+}
+
+.buttons_group button {
+    background-color: transparent;
+    border: solid 3px;
+    border-color: black;
+    flex: 1;
     height: 44px;
-    color: var(--white-color);
-    border: solid 2px var(--white-color);
-}
-
-.score_table {
-    display: flex;
-    gap: 64px;
-}
-
-.buttons_box {
-    margin-top: 164px;
-}
-
-.buttons_box .buttons_group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.player-action-btn {
-    border: solid 2px var(--white-color);
-    color: var(--white-color);
-    width: 164px;
-    height: 52px;
-    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
+    transition: all 0.1s ease-in;
 }
+
+.buttons_group button:hover {
+    border-color: var(--neonpink-color);
+    color: var(--neonpink-color);
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-size: contain;
+        background-position: center;
+    }
+}   
