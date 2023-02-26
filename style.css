@@ -51,6 +51,19 @@ header p {
     background-color: white;
 }
 
+
+.player_instruction_box {
+    position: fixed;
+    bottom: 112px;
+    width: 50%;
+    text-align: center;
+}
+
+.player_instruction_box p {
+    font-size: 36px;
+    font-weight: 500;
+}
+
 .buttons_box {
     position: fixed;
     bottom: 0px;
