@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="field.css">
+    <link rel="stylesheet" href="projectile.css">
     <script src="script.js"></script>
     <title>RockPaperScissors</title>
 </head>
@@ -26,15 +27,19 @@
         <div class="avatar enemy"></div>
     </div>
 
-
-    <div class="buttons_box">
-        <div class="buttons_group">
-            <button>rock</button>
-            <button>paper</button>
-            <button>scissors</button>
-        </div>
+    <div id="projectile_tube">
+        <div id="projectileContainer"></div>
     </div>
 
 
+    <div class="buttons_box">
+        <div class="buttons_group">
+            <button id="shootButton">rock</button>
+            <button id="shootButton">paper</button>
+            <button id="shootButton">scissors</button>
+        </div>
+    </div>
+
+<script src="projectile.js"></script>
 </body>
 </html>
