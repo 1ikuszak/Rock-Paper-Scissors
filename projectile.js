@@ -2,6 +2,10 @@ const projectile_tube = document.getElementById("projectile_tube");
 const projectileContainer = document.getElementById("projectileContainer");
 const shootButtons = document.querySelectorAll("#shootButton");
 
+const player_score_txt = document.querySelector(".player-score") 
+const enemy_score_txt = document.querySelector(".enemy-score") 
+
+console.log(player_score_txt)
 
 shootButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -31,10 +35,8 @@ shootButtons.forEach(button => {
         case "player win!":
             player_score++
       }
-      console.log(computer_score + " " + player_score )
-
-
-
+      player_score_txt.innerText = player_score
+      enemy_score_txt.innerText = computer_score
     });
 
     //enemy animation

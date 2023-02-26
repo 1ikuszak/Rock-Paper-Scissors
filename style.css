@@ -36,22 +36,24 @@ header p {
 .score_section {
     position: absolute;
     width: 100%;
-    top: 36%;
+    top: 50%;
     transform: translateY(-50%);
+    mix-blend-mode: difference;
 }
 
 .score_section .table {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 198px;
     mix-blend-mode: difference;
+    gap: 800px;
 }
 
 .score_section .table p {
-    font-size: 44px;
+    font-size: 164px;
     color: var(--white-color);
     mix-blend-mode: difference;
+    filter: brightness(90%);
 }
 
 
