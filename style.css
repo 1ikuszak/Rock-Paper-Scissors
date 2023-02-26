@@ -17,23 +17,39 @@
     outline: none;
 }
 
-body {
-    background-image: url("/img/battle_field.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    mix-blend-mode: difference;
 }
 
 header p {
-    font-size: 50px;
-    color: var(--neonpink-color);
+    font-size: 54px;
+    color: var(--white-color);
+    mix-blend-mode: difference;
+    font-weight: bold;
 }
 
+
+.avatars_box {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    mix-blend-mode: difference;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+}
 
 .buttons_box {
     position: fixed;
