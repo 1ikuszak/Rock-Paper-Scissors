@@ -33,6 +33,27 @@ header p {
     font-weight: bold;
 }
 
+.score_section {
+    position: absolute;
+    width: 100%;
+    top: 36%;
+    transform: translateY(-50%);
+}
+
+.score_section .table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 198px;
+    mix-blend-mode: difference;
+}
+
+.score_section .table p {
+    font-size: 44px;
+    color: var(--white-color);
+    mix-blend-mode: difference;
+}
+
 
 .avatars_box {
     position: absolute;
