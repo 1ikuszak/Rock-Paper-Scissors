@@ -27,7 +27,7 @@ header {
 }
 
 header p {
-    font-size: 54px;
+    font-size: 46px;
     color: var(--white-color);
     mix-blend-mode: difference;
     font-weight: bold;
@@ -108,7 +108,7 @@ header p {
     border-color: black;
     flex: 1;
     height: 44px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.1s ease-in;

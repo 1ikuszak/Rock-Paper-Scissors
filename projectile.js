@@ -26,8 +26,6 @@ shootButtons.forEach(button => {
       computer_choice = getComputerChoice(RandomInt(1,3))
       switch(playRound(player_choice, computer_choice)) {
         case "draw!":
-            player_score++
-            computer_score++
             break
         case "computer win!":
             computer_score++
