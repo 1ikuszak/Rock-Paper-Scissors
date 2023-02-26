@@ -2,8 +2,8 @@ const projectile_tube = document.getElementById("projectile_tube");
 const projectileContainer = document.getElementById("projectileContainer");
 const shootButtons = document.querySelectorAll("#shootButton");
 
-const player_score_txt = document.querySelector(".player-score") 
-const enemy_score_txt = document.querySelector(".enemy-score") 
+const player_score_txt = document.querySelector(".player-score")
+const enemy_score_txt = document.querySelector(".enemy-score")
 
 console.log(player_score_txt)
 
@@ -23,15 +23,16 @@ shootButtons.forEach(button => {
       player_choice = getPlayerChoice(button.className)
 
       // set computer choice
-      computer_choice = getComputerChoice(RandomInt(1,3))
-      switch(playRound(player_choice, computer_choice)) {
+      computer_choice = getComputerChoice(RandomInt(1, 3))
+      console.log(player_choice + computer_choice)
+      switch (playRound(player_choice, computer_choice)) {
         case "draw!":
-            break
+          break
         case "computer win!":
-            computer_score++
-            break
+          computer_score++
+          break
         case "player win!":
-            player_score++
+          player_score++
       }
       player_score_txt.innerText = player_score
       enemy_score_txt.innerText = computer_score
@@ -54,7 +55,7 @@ var computer_choice = null
 let player_score = 0
 let computer_score = 0
 
-function getPlayerChoice (string) {
+function getPlayerChoice(string) {
   return string
 }
 
@@ -80,14 +81,17 @@ function getComputerChoice(num) {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-      return "draw!"
+    return "draw!"
   }
   else if (playerSelection === "rock" && computerSelection === "scissors") {
-      return "player win!"
+    return "player win!"
   }
   else if (playerSelection === "scissors" && computerSelection === "paper") {
-      return "player win!"
+    return "player win!"
+  }
+  else if (playerSelection === "paper" && computerSelection === "rock") {
+    return "player win!"
   }
   else
-   return "computer win!"
+    return "computer win!"
 }
