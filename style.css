@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+
+:root {
+    --dark-color: #121212;
+    --white-color: #fff;
+    --neonpink-color: #FF10F0;
+    --neonyellow-color: #FFFF33;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+
+header {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    mix-blend-mode: difference;
+}
+
+header p {
+    font-size: 46px;
+    color: var(--white-color);
+    mix-blend-mode: difference;
+    font-weight: bold;
+}
+
+.score_section {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    mix-blend-mode: difference;
+}
+
+.score_section .table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: difference;
+    gap: 800px;
+}
+
+.score_section .table p {
+    font-size: 164px;
+    color: var(--white-color);
+    mix-blend-mode: difference;
+    filter: brightness(90%);
+}
+
+
+.avatars_box {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    mix-blend-mode: difference;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+}
+
+
+.player_instruction_box {
+    position: fixed;
+    bottom: 112px;
+    width: 50%;
+    text-align: center;
+}
+
+.player_instruction_box p {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.buttons_box {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 50%;
+}
+
+.buttons_group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 32px 24px;
+}
+
+.buttons_group button {
+    background-color: transparent;
+    border: solid 3px;
+    border-color: black;
+    flex: 1;
+    height: 44px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+.buttons_group button:hover {
+    border-color: var(--neonpink-color);
+    color: var(--neonpink-color);
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-size: contain;
+        background-position: center;
+    }
+}   

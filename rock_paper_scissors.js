@@ -31,17 +31,20 @@ function getUserChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return "draw!"
+      return "draw!"
     }
     else if (playerSelection === "rock" && computerSelection === "scissors") {
-        return "player win!"
+      return "player win!"
     }
     else if (playerSelection === "scissors" && computerSelection === "paper") {
-        return "player win!"
+      return "player win!"
+    }
+    else if (playerSelection === "paper" && computerSelection === "rock") {
+      return "player win!"
     }
     else
-     return "computer win!"
-}
+      return "computer win!"
+  }
 
 function game(max_rounds) {
     let player_score = 0
@@ -80,4 +83,4 @@ function game(max_rounds) {
 }
 
 
-console.log(game(3))
+// console.log(game(3))

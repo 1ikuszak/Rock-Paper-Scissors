@@ -1,0 +1,67 @@
+:root {
+  --dark-color: #121212;
+  --white-color: #fff;
+  --neonpink-color: #FF10F0;
+  --neonblue-color: #04d9ff;
+  --neonyellow-color: #FFFF33;
+}
+
+
+#projectile_tube {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  background-color: transparent;
+}
+
+.projectile {
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  animation-fill-mode: forwards;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+}
+
+
+.projectile.player {
+  top: 0;
+  left: 26px;
+  transform: translateY(-50%);
+  transform: translateX(50%);
+  background-color: var(--neonpink-color);
+  animation-name: movePlayerProjectile;
+}
+
+.projectile.enemy {
+  top: 0;
+  right: 26px;
+  transform: translateY(-50%);
+  transform: translateX(50%);
+  background-color: var(--neonblue-color);
+  animation-name: moveEnemyProjectile;
+}
+  
+@keyframes movePlayerProjectile {
+  0% {
+    transform: translate(-26px, 0);
+  }
+  100% {
+    transform: translate(calc(50vw - 39px), 0px);
+  }
+}
+
+@keyframes moveEnemyProjectile {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(calc(-50vw + 39px), 0px);
+  }
+}
