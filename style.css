@@ -87,6 +87,20 @@ header p {
     font-weight: 500;
 }
 
+.enemy_message_box {
+    position: fixed;
+    top: 34%;
+    left: 62%;
+    width: 50%;
+    text-align: center;
+}
+
+.enemy_message_box p {
+    color: var(--white-color);
+    font-size: 36px;
+    font-weight: 500;
+}
+
 .buttons_box {
     position: fixed;
     bottom: 0px;
@@ -104,11 +118,11 @@ header p {
 
 .buttons_group button {
     background-color: transparent;
-    border: solid 3px;
+    border: solid 4px;
     border-color: black;
     flex: 1;
-    height: 44px;
-    font-size: 24px;
+    height: 56px;
+    font-size: 28px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.1s ease-in;
