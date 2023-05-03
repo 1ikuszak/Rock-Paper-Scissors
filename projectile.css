@@ -15,7 +15,6 @@
   left: 0;
   box-sizing: border-box;
   transform: translateY(-50%);
-  background-color: transparent;
 }
 
 .projectile {
@@ -63,5 +62,35 @@
   }
   100% {
     transform: translate(calc(-50vw + 39px), 0px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #projectile_tube {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+  }
+
+  @keyframes movePlayerProjectile {
+    0% {
+      transform: translate(-29px, 0);
+    }
+    100% {
+      transform: translate(-29px, calc(50vh - 13px));
+    }
+  }
+  
+  @keyframes moveEnemyProjectile {
+    0% {
+      transform: translate(29px, calc(100vh - 40px));
+    }
+    100% {
+      transform: translate(29px, calc(50vh - 13px));
+    }
   }
 }
