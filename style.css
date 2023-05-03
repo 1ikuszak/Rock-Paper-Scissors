@@ -46,7 +46,7 @@ header p {
     justify-content: center;
     align-items: center;
     mix-blend-mode: difference;
-    gap: 800px;
+    gap: 600px;
 }
 
 .score_section .table p {
@@ -135,8 +135,58 @@ header p {
 
 
 @media screen and (max-width: 600px) {
-    body {
-        background-size: contain;
-        background-position: center;
+    
+    header{
+        display: none;
     }
-}   
+
+    .avatars_box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .avatar {
+        width: 82px;
+        height: 82px;
+    }
+
+    .player_instruction_box, .enemy_message_box {
+        display: none;
+    }
+
+    .buttons_box {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    
+    .buttons_group {
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        gap: 6px;
+        margin: 10px 10px;
+        text-align: right;
+        width: fit-content;
+    }
+    
+    .buttons_group button {
+        background-color: transparent;
+        border: solid 3px;
+        border-color: white;
+        width: 100%;
+        color: #fff;
+        padding: 6px 20px;
+    }
+    
+    .score_section .table {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .score_section .table p {
+        font-size: 48px;
+    }
+  }

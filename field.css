@@ -5,6 +5,7 @@
 
 .field {
     display: flex;
+    flex-direction: row;
 }
 
 .half-field{
@@ -32,3 +33,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+@media screen and (max-width: 600px) {
+    
+    .field{
+        flex-direction: column;
+    }
+
+    .half-field{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .center-cricle {
+        width: 180px;
+        height: 180px;
+    }
+  }
